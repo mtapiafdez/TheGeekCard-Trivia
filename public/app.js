@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	getQuestion();
 });
 
-// When a user enters a username => A 'new user' will be emitted to server 
+// When a user enters a username => A 'new user' will be emitted to server
 // for processing with the value of the id 'user-name'
 document.getElementById("user-form").addEventListener("submit", e => {
 	e.preventDefault();
@@ -22,10 +22,10 @@ document.getElementById("user-form").addEventListener("submit", e => {
 	document.getElementById("user-name").value = "";
 });
 
-// Function calls API => On promise return, process the data 
+// Function calls API => On promise return, process the data
 // and insert the question and options to the page.
 const getQuestion = () => {
-	fetch("http://localhost:3500/questions")
+	fetch("https://thegeekcard-trivia.herokuapp.com/questions") // http://localhost:3500/questions
 		.then(response => response.json())
 		.then(questionsData => {
 			let answers = questionsData.qans;
@@ -41,7 +41,7 @@ const getQuestion = () => {
 		});
 };
 
-// When a user clicks an option => A response is sent to the server. 
+// When a user clicks an option => A response is sent to the server.
 // The server will process the answer and emit proper response ("wrong answer" / "new question")
 const answerQuestion = response => {
 	socket.emit("answer question", response);
