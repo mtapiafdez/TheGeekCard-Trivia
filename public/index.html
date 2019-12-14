@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>TheGeekCard Trivia</title>
+		<link rel="stylesheet" type="text/css" href="./styles.css" />
+	</head>
+	<body>
+		<h1 class="main-header">TheGeekCard Communication 🤓</h1>
+		<div class="user-creation">
+			<form class="user-form" id="user-form">
+				<label>Enter Username</label>
+				<input id="user-name" required />
+				<input type="submit" value="Login" />
+			</form>
+		</div>
+		<div id="main-container" class="container">
+			<div class="players">
+				<h2 class="players__header">
+					Players
+				</h2>
+				<div id="current__players" class="players__box"></div>
+			</div>
+			<div class="questions">
+				<h2 class="questions__header">
+					Question
+				</h2>
+				<div class="questions__box">
+					<h4 class="current__question" id="current__question"></h4>
+					<div class="current__options" id="current__options"></div>
+				</div>
+			</div>
+		</div>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"
+			integrity="sha256-bQmrZe4yPnQrLTY+1gYylfNMBuGfnT/HKsCGX+9Xuqo="
+			crossorigin="anonymous"
+		></script>
+		<script src="./app.js"></script>
+	</body>
+</html>
