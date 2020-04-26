@@ -1,3 +1,4 @@
+// This script file requires sockets in order for the application to work properly
 // On Document Load => Call API that returns current question and options
 document.addEventListener("DOMContentLoaded", () => {
 	getQuestion();
