@@ -1,4 +1,5 @@
 // Required Dependencies
+// These are all external packages needed
 const express = require("express");
 const app = express();
 const server = require("http").createServer(app);
@@ -7,7 +8,8 @@ const io = require("socket.io").listen(server);
 const cors = require("cors");
 const path = require("path");
 
-// Users Array (Username/Score) & Connections Array (Socket Objects)
+// Users Array (Username/Score) & Connections Array (Socket Objects). This needs to be extensible
+// as these are just arrays in memory
 let users = [];
 let connections = [];
 
