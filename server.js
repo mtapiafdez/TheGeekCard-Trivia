@@ -1,4 +1,5 @@
 // Required Dependencies
+// These are used throughout the application
 const express = require("express");
 const app = express();
 const server = require("http").createServer(app);
