@@ -1,4 +1,5 @@
 // Required Dependencies
+// These packages make development quicker
 const express = require("express");
 const app = express();
 const server = require("http").createServer(app);
@@ -8,6 +9,8 @@ const cors = require("cors");
 const path = require("path");
 
 // Users Array (Username/Score) & Connections Array (Socket Objects)
+// Redis
+// Or other dtabase systems
 let users = [];
 let connections = [];
 
